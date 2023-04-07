@@ -1,0 +1,380 @@
+/* styles.css */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradient-wave 15s ease infinite;
+}
+
+@keyframes gradient-wave {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+nav {
+    background-color: transparent;
+    padding: 1rem 0;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo {
+    color: white;
+    font-size: 1.5rem;
+    margin-left: 1rem;
+}
+
+.menu {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu li a {
+    color: white;
+    text-decoration: none;
+    margin-right: 1rem;
+}
+
+.menu li a:hover {
+    text-decoration: underline;
+}
+
+
+
+section {
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 2rem;
+}
+
+#section1 {
+    position: relative;
+    overflow: hidden;
+    background-image: url('background.jpg');
+    background-size: cover;
+    background-position: center;
+    min-height: 40vh;
+}
+
+#section1 h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3rem;
+    color: #a7a8a9;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    animation: slide-up 1s ease-out;
+}
+
+@keyframes slide-up {
+    0% {
+        transform: translate(-50%, 300px);
+        opacity: 0;
+    }
+    100% {
+        transform: translate(-50%, -50%);
+        opacity: 1;
+    }
+}
+
+
+
+
+#section2 img {
+width: 100%;
+max-width: 600px;
+margin-top: 2rem;
+}
+
+/* #section3 {
+
+} */
+
+/* Bagian section 3 */
+.finance-docs {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1rem;
+}
+
+/* Tampilan laptop */
+@media (min-width: 1024px) {
+    .finance-docs {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Tampilan komputer */
+@media (min-width: 1500px) {
+    .finance-docs {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+
+.finance-docs li {
+    margin-bottom: 1rem;
+    text-align: center;
+    list-style: none;
+}
+
+.spreadsheet {
+    width: 100%;
+    max-width: 600px;
+    height: 400px;
+    position: relative;
+    border: none;
+}
+
+.spreadsheet iframe {
+    width: 100%;
+    height: 100%;
+}
+
+@media screen and (max-width: 600px) {
+    .spreadsheet {
+        height: 300px;
+    }
+}
+
+
+
+
+.finance-docs a {
+background-color: #333;
+color: white;
+padding: 0.5rem 1rem;
+text-decoration: none;
+border-radius: 3px;
+}
+
+.finance-docs a:hover {
+background-color: #555;
+}
+
+.download-link {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    border: 1px solid #333;
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.download-link:hover {
+    background-color: #333;
+    color: #fff;
+}
+
+@media (max-width: 768px) {
+    .download-link {
+        font-size: 12px;
+        padding: 0.3rem 0.8rem;
+    }
+}
+
+/* akhir section 3 */
+
+
+footer {
+background-color: #333;
+color: white;
+padding: 1rem 0;
+text-align: center;
+}
+
+@media (max-width: 768px) {
+.menu {
+    display: none;
+}}
+
+
+/* Animasi kotak dan gelembung */
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+.shape {
+    position: absolute;
+    opacity: 0.5;
+    animation: float 6s ease-in-out infinite;
+}
+
+.square {
+    width: 20px;
+    height: 20px;
+    background-color: #f1c40f;
+}
+
+.circle {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #3498db;
+}
+
+
+/* Hamburger */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    background-color: #fff;
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+    z-index: 100;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.hamburger span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px;
+    background-color: #ca0303;
+}
+
+.hamburger.open span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger.open span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.open span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+.mobile-nav {
+    display: none;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background-color: #fff;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 100%;
+    z-index: 99;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.mobile-nav.show {
+    display: block;
+}
+
+.mobile-nav a {
+    display: block;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+}
+
+/* pop up */
+.popup-btn {
+  background-color: #3f3d3c;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.popup-btn:hover {
+  background-color: #8eb9a0;
+}
+
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+
+.popup.hidden {
+  display: none;
+}
+
+.popup-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #ffffff;
+  padding: 20px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  width: 70%;
+  height: 70%;
+  overflow: auto;
+  resize: both;
+  border-radius: 10px;
+}
+
+.close-btn {
+  position: absolute;
+  top: 5px;
+  right: 15px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  color: #2ecc71;
+}
+
+iframe {
+  width: 100%;
+  height: calc(100% - 45px);
+}
+
+.resizer {
+  display: none;
+}
