@@ -2,18 +2,9 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background: linear-gradient(-45deg, #2d4059, #2d4059, #2d4059, #2d4059);
+    background: linear-gradient(-45deg, #2d4059, #1e2a3a, #3b4c68, #1e2a3a, #2d4059);
     background-size: 400% 400%;
-    animation: gradient-wave 15s ease infinite;
-  }
-h1 {
-    font-size: 3.5rem;
-    margin-bottom: 0.5rem;
-  }
-  
-h2 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
+    animation: gradient-wave 12s ease-in-out infinite;
   }
 @keyframes gradient-wave {
     0% {
@@ -26,6 +17,17 @@ h2 {
         background-position: 0% 50%;
     }
 }
+
+h1 {
+    font-size: 3.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+
 
 nav {
     background-color: transparent;
