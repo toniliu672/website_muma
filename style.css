@@ -95,7 +95,7 @@ section {
     z-index: 10;
     text-align: center;
     color: white;
-    animation: slide-up-v2 1s ease-out;
+    animation: slide-up-v2 1s ease-in-out;
   }
   
   .shape {
@@ -169,6 +169,7 @@ section {
 }
 
 /* section 2 */
+
 .sub-judul {
     font-size: 1rem;
   font-weight: bold;
@@ -193,7 +194,13 @@ section {
 /* Bagian section 3 */
 #section3 {
     margin-top: -50px; /* Atur nilai ini sesuai dengan kebutuhan Anda */
-  }
+    position: relative;
+    overflow: hidden;
+    background-image: url('background.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+}
 
 .finance-docs {
     display: grid;
@@ -400,7 +407,7 @@ text-align: center;
 /* pop up */
 .popup-btn {
   background-color: #3f3d3c;
-  border: none;
+  border: 1px white solid;
   color: white;
   padding: 10px 20px;
   text-align: center;

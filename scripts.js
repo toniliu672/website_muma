@@ -14,7 +14,8 @@ let iframe = document.getElementById("spreadsheet");
 let spreadsheets = [
     "https://docs.google.com/spreadsheets/d/e/2PACX-1vTu_hHm_4GTaLlOHBILQ-xK4CnDYpO4O0Hqz-3vJ9NwoUAAv5r9U8vAxg7cUIdgSyuejdtShyiCv_DY/pubhtml?rm=minimal&gid=1001675976&single=true&widget=true&headers=false",
     "https://docs.google.com/spreadsheets/d/e/2PACX-1vRpecI3p684bu6eF25W0DaTnGNom9Lt60XmRZFIErmPsW87ZID_prReuDe_gXM47_S3aiC2CtXUIeps/pubhtml?rm=minimal&gid=0&single=true&widget=true&headers=false",
-    "https://docs.google.com/spreadsheets/d/e/2PACX-1vSgzBd_zAxOR3CoxoF4GsHtA9XQDlNyipNfsmLpWFbHdN7ywb94y-hP1hDmI9s1H5k1dSCYU3s2Q76I/pubhtml?rm=minimal&gid=0&single=true&widget=true&headers=false"
+    "https://docs.google.com/spreadsheets/d/e/2PACX-1vSgzBd_zAxOR3CoxoF4GsHtA9XQDlNyipNfsmLpWFbHdN7ywb94y-hP1hDmI9s1H5k1dSCYU3s2Q76I/pubhtml?rm=minimal&gid=0&single=true&widget=true&headers=false",
+    "https://drive.google.com/file/d/1o2ziF2I2DW1OqHRCNpNa7xmtQlPUrF0H/view?usp=share_link"
   ];
 
 function setPopupSize() {
