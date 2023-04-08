@@ -2,11 +2,19 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background: linear-gradient(-45deg, #2d4059, #2d4059, #2d4059, #2d4059);
     background-size: 400% 400%;
     animation: gradient-wave 15s ease infinite;
-}
-
+  }
+h1 {
+    font-size: 3.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
 @keyframes gradient-wave {
     0% {
         background-position: 0% 50%;
@@ -66,14 +74,65 @@ section {
     padding: 2rem;
 }
 
+/* Section 1 */
 #section1 {
     position: relative;
     overflow: hidden;
     background-image: url('background.jpg');
     background-size: cover;
     background-position: center;
-    min-height: 40vh;
-}
+    min-height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding-top: 10%; /* Atur jarak tulisan 'MUMAJUR 2023' dari atas */
+    /* Sisanya dari gaya section1 */
+  }
+  
+  .content {
+    position: relative;
+    z-index: 10;
+    text-align: center;
+    color: white;
+  }
+  
+  .shape {
+    position: absolute;
+    z-index: 5;
+    opacity: 0.2;
+  }
+  
+  .square {
+    width: 100px;
+    height: 100px;
+    background-color: #2ecc71;
+  }
+  
+  .circle {
+    width: 100px;
+    height: 100px;
+    background-color: #2ecc71;
+    border-radius: 50%;
+  }
+  
+  /* Tambahkan animasi pada elemen kotak dan lingkaran */
+  @keyframes float {
+    0% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+    100% {
+      transform: translateY(0px);
+    }
+  }
+  
+  .shape {
+    animation: float 4s ease-in-out infinite;
+  }
+  
 
 #section1 h1 {
     position: absolute;
@@ -97,20 +156,31 @@ section {
     }
 }
 
-
-
-
-#section2 img {
-width: 100%;
-max-width: 600px;
-margin-top: 2rem;
+/* section 2 */
+.sub-judul {
+    font-size: 1rem;
+  font-weight: bold;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  color: #e9e1e1;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 2px #1f1c1c;
 }
+.text {
+    font-size: 14px;
+    color: #e6e6e6;
+}
+.highlight {
+    color: #FFC107;
+    font-weight: bold;
+  }
 
-/* #section3 {
-
-} */
 
 /* Bagian section 3 */
+#section3 {
+    margin-top: -50px; /* Atur nilai ini sesuai dengan kebutuhan Anda */
+  }
+
 .finance-docs {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
@@ -268,7 +338,7 @@ text-align: center;
     width: 25px;
     height: 3px;
     margin: 5px;
-    background-color: #ca0303;
+    background-color: #beb2b2;
 }
 
 .hamburger.open span:nth-child(1) {
@@ -378,3 +448,38 @@ iframe {
 .resizer {
   display: none;
 }
+
+/* Dashboard */
+.dashboard {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    padding: 15px;
+  }
+  
+  .chart-container {
+    height: 300px;
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  canvas {
+    max-width: 100%;
+  }
+  
+  @media (max-width: 767px) {
+    .chart-container {
+      height: 200px;
+    }
+  }
+/* CSS */
+@media (min-width: 992px) {
+    .chart-container {
+      width: 50%;
+    }
+  }
+  
