@@ -128,5 +128,26 @@ $(document).ready(function () {
 });
 
 
+document.addEventListener('DOMContentLoaded', function () {
+  var timelineBlocks = document.querySelectorAll('.timeline-block');
+
+  function animateTimelineBlocks() {
+    for (var i = 0; i < timelineBlocks.length; i++) {
+      var blockOffsetTop = timelineBlocks[i].offsetTop;
+      var blockHeight = timelineBlocks[i].offsetHeight;
+
+      if (window.pageYOffset + window.innerHeight > blockOffsetTop + blockHeight / 2) {
+        timelineBlocks[i].style.opacity = '1';
+        timelineBlocks[i].style.transform = 'translateY(0)';
+      } else {
+        timelineBlocks[i].style.opacity = '0';
+        timelineBlocks[i].style.transform = 'translateY(50px)';
+      }
+    }
+  }
+
+  animateTimelineBlocks();
+  window.addEventListener('scroll', animateTimelineBlocks);
+});
 
   

@@ -15,6 +15,11 @@
         
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
+        <link rel="stylesheet" href="https://cdn.knightlab.com/libs/timeline3/latest/css/timeline.css">
+        <script src="https://cdn.knightlab.com/libs/timeline3/latest/js/timeline.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+
     </head>
     
     
@@ -25,18 +30,21 @@
             <div class="logo"></div>
             <ul class="menu">
                 <li><a href="#section1">Beranda</a></li>
-                <li><a href="#section2">Dashboard</a></li>
-                <li><a href="#section3">Laporan Keuangan</a></li>
+                <li><a href="#section1-1">Timeline</a></li>
+                <li><a href="#section2">Grafik Keuangan</a></li>
+                <li><a href="#section3">Dokumen Keuangan</a></li>
             </ul>
             <div class="navbar">
                 <div class="hamburger">
                     <span></span>
                     <span></span>
                     <span></span>
+                    <span></span>
                 </div>
                 <ul id="mobile-menu" class="mobile-nav">
                     <li><a href="#section1">Beranda</a></li>
-                    <li><a href="#section2">Dashboard</a></li>
+                    <li><a href="#section1-1">Timeline</a></li>
+                    <li><a href="#section2">Grafik Keuangan</a></li>
                     <li><a href="#section3">Laporan Keuangan</a></li>
                 </ul>
             </div>
@@ -54,6 +62,39 @@
         <div class="shape circle" style="top: 80%; left: 30%;"></div>
       </section>
       
+    <section id="section1-1" >
+      <div class="content">
+        <h2>Timeline</h2>
+      </div>
+      <div class="timeline">
+        <div class="timeline-container">
+          <div class="bg-object"></div>
+          <div class="bg-object"></div>
+          <div class="bg-object"></div>
+          <div class="bg-object"></div>
+          <div class="timeline-block" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
+            <span class="timeline-date">Selasa, 11 April</span>
+            <div class="timeline-content">
+              <h3>Pencarian Dana Ke-2</h3>
+              <p></p>
+            </div>
+          </div>
+          <div class="timeline-block">
+            <span class="timeline-date">Kamis, 13 April</span>
+            <div class="timeline-content">
+              <h3>Sidang MUMAJUR</h3>
+              <ul>
+                <li>Ruangan : Ruang Kegiatan LKM Lantai 2</li>
+                <li>Waktu  : 16:00 Wita</li>
+              </ul>
+            </div>
+          </div>
+          <!-- Tambahkan lebih banyak blok kegiatan di sini -->
+        </div>
+      </div>
+    </section>
+
+    
     <section id="section2">
         <div class="content">
           <h2>Dashboard</h2>  
@@ -115,6 +156,30 @@
             hamburger.classList.remove('open');
         });
     </script>
+<script>
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
+</script>
+
+<script>
+  var timeline_json_url = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vTlcas19HbZ47VRdb_DpCY8cN6dmIBQTUjzPqbN0VmRkQ1AQ966i0qGq7-pujpeGxo5RYOxAASxvm2S/pubhtml?gid=0&single=true'; // Ganti dengan URL Google Sheets Anda
+
+  var additionalOptions = {
+    start_at_end: false,
+    timenav_position: 'top',
+    initial_zoom: 2
+  };
+
+  var timeline = new TL.Timeline('timeline-embed', timeline_json_url, additionalOptions);
+</script>
+
 
 <!-- HTML -->
 <script>
@@ -136,6 +201,9 @@
         }
       });
     });
+  </script>
+  <script>
+    AOS.init();
   </script>
   
 
