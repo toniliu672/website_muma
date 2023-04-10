@@ -757,81 +757,56 @@ iframe {
 }
 
 @keyframes move1 {
-  0% {
+  0%, 100% {
     top: 100%;
     transform: translateY(0);
-    opacity: 0;
-  }
-  10% {
     opacity: 0.5;
   }
-  90% {
-    opacity: 0.5;
-  }
-  100% {
-    top: -80px;
-    transform: translateY(-100%);
-    opacity: 0;
+  50% {
+    top: 10%;
+    transform: translateY(-500%);
+    opacity: 1;
   }
 }
 
 @keyframes move2 {
-  0% {
+  0%, 100% {
     top: 100%;
     transform: translateY(0);
-    opacity: 0;
-  }
-  10% {
     opacity: 0.5;
   }
-  90% {
-    opacity: 0.5;
-  }
-  100% {
-    top: -60px;
-    transform: translateY(-100%);
-    opacity: 0;
+  50% {
+    top: 20%;
+    transform: translateY(-400%);
+    opacity: 1;
   }
 }
 
 @keyframes move3 {
-  0% {
+  0%, 100% {
     top: 100%;
     transform: translateY(0);
-    opacity: 0;
-  }
-  10% {
     opacity: 0.5;
   }
-  90% {
-    opacity: 0.5;
-  }
-  100% {
-    top: -120px;
-    transform: translateY(-100%);
-    opacity: 0;
+  50% {
+    top: 5%;
+    transform: translateY(-950%);
+    opacity: 1;
   }
 }
 
 @keyframes move4 {
-  0% {
+  0%, 100% {
     top: 100%;
     transform: translateY(0);
-    opacity: 0;
-  }
-  10% {
     opacity: 0.5;
   }
-  90% {
-    opacity: 0.5;
-  }
-  100% {
-    top: -100px;
-    transform: translateY(-100%);
-    opacity: 0;
+  50% {
+    top: 25%;
+    transform: translateY(-300%);
+    opacity: 1;
   }
 }
-
 
 /* Collapse menu styles */
 .collapse-menu {
