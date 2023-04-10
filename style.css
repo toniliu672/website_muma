@@ -846,15 +846,6 @@ iframe {
   animation: gradient 6s infinite;
 }
 
-@keyframes gradient {
-  0% {
-    background-position: 200% 0;
-  }
-  100% {
-    background-position: -200% 0;
-  }
-}
-
 @media (max-width: 360px) {
   .collapse-btn {
     padding-left: 10px;
@@ -880,10 +871,15 @@ iframe {
     padding: 0 10px;
   }
 }
-
-@media (min-width: 180px) {
-  .collapse-content {
-    padding: 0 5px;
+@media (min-width: 768px) {
+  .dashboard {
+    display: flex;
+    flex-wrap: nowrap; /* Mengubah ini dari wrap menjadi nowrap */
+    justify-content: space-between; /* Mengubah ini dari center menjadi space-between */
+  }
+  .chart-container {
+    width: calc(50% - 15px); /* Menambahkan ini untuk mengatur lebar diagram menjadi 50% dari kontainer dengan mengurangi jarak */
   }
 }
+
 
