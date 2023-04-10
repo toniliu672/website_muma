@@ -816,19 +816,56 @@ iframe {
   margin-top: 20px;
 }
 
+/* Tombol Collapse */
 .collapse-btn {
   background-color: #444;
   color: white;
   cursor: pointer;
   padding: 18px;
   width: 100%;
-  text-align: left;
+  text-align: center;
   outline: none;
   font-size: 15px;
+  font-family: 'Arial', sans-serif;
   transition: 0.4s;
   border: none;
   border-bottom: 1px solid white;
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box; /* Menambahkan box-sizing agar padding tidak mempengaruhi lebar total */
 }
+
+/* Efek warna gradient yang bergerak */
+.collapse-btn:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(120deg, #3a7bd5, #3a6073, #3a7bd5);
+  background-size: 200% 200%;
+  z-index: -1;
+  opacity: 0.5;
+  animation: gradient 6s infinite;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+@media (max-width: 360px) {
+  .collapse-btn {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
 
 .collapse-btn:hover {
   background-color: #555;
