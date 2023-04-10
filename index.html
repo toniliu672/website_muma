@@ -84,7 +84,7 @@
             <div class="timeline-content">
               <h3>Sidang MUMAJUR</h3>
               <ul>
-                <li>Ruangan : Ruang Kegiatan LKM Lantai 2</li>
+                <li>Tempat : Ruangan Kegiatan LKM Lantai 2</li>
                 <li>Waktu  : 16:00 Wita</li>
               </ul>
             </div>
@@ -94,25 +94,52 @@
       </div>
     </section>
 
-    
     <section id="section2">
         <div class="content">
           <h2>Grafik</h2>  
         </div>
-        <div >
-            <h3 class="sub-judul">Arus Kas <br> 31 Mar - 3 Apr</h3>
+              <!-- Collapse menu -->
+  <div class="collapse-menu">
+    <button class="collapse-btn">31 Mar - 3 Apr</button>
+    <div class="collapse-content">
+      <div >
+        <h3 class="sub-judul">Arus Kas <br> 31 Mar - 3 Apr</h3>
+    </div>
+    <div class="dashboard">
+      <div class="chart-container batang">
+        <canvas id="cashFlowChart"></canvas>
+      </div>
+      <div class="chart-container">
+        <canvas id="incomeExpenseChart"></canvas>
+      </div>
+
+    </div>
+    
+    </div>
+    <button class="collapse-btn">10 - 12 Apr</button>
+    <div class="collapse-content">
+      <div >
+        <h3 class="sub-judul">Arus Kas <br> 10 - 13 Apr</h3>
+    </div>
+    <div class="dashboard">
+      <!-- Diagram Batang -->
+        <div class="chart-container">
+          <canvas id="barChart"></canvas>
         </div>
-        <div class="dashboard">
-          <div class="chart-container batang">
-            <canvas id="cashFlowChart"></canvas>
-          </div>
-          <div class="chart-container">
-            <canvas id="incomeExpenseChart"></canvas>
-          </div>
-          <div >
-            <p class="text">Jumlah uang yang terkumpul di bendahara adalah <span class="highlight">Rp 500.500</span>.</p>
-          </div>
+
+        <!-- Diagram Lingkaran -->
+        <div class="chart-container">
+          <canvas id="circleChart"></canvas>
         </div>
+        <br>
+</div>
+      <!-- Content goes here -->
+    </div>
+  </div>
+  <div >
+    <p class="text">Jumlah uang di bendahara saat ini adalah <span class="highlight" id="jumlah-uang"></span>.</p>
+  </div>
+
 
     </section>
 

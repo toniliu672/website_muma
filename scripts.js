@@ -60,8 +60,8 @@ const cashFlowChart = new Chart(document.getElementById("cashFlowChart"), {
         borderWidth: 1,
       },
       {
-        label: "Saldo Akhir (Rp)",
-        data: [0 ,0 , 0, 500500],
+        label: "Saldo (Rp)",
+        data: [40000 ,40000 , 80500, 500500],
         backgroundColor: "rgba(255, 193, 7, 0.2)",
         borderColor: "rgba(255, 193, 7, 1)",
         borderWidth: 1,
@@ -150,4 +150,101 @@ document.addEventListener('DOMContentLoaded', function () {
   window.addEventListener('scroll', animateTimelineBlocks);
 });
 
-  
+// Collapse menu script
+document.addEventListener("DOMContentLoaded", function () {
+  const collapseBtns = document.querySelectorAll(".collapse-btn");
+
+  collapseBtns.forEach((btn) => {
+    btn.addEventListener("click", function () {
+      this.classList.toggle("active");
+      const content = this.nextElementSibling;
+      if (content.style.maxHeight) {
+        content.style.maxHeight = null;
+      } else {
+        content.style.maxHeight = content.scrollHeight + "px";
+      }
+    });
+  });
+});
+
+
+// Fungsi untuk membuat diagram batang
+function createBarChart() {
+  const ctx = document.getElementById("barChart").getContext("2d");
+  const chart = new Chart(ctx, {
+    type: "bar",
+    data: {
+      labels: ["10 April", "11 April", "12 April", "13 April"],
+      datasets: [
+        {
+          label: "Uang Masuk (Rp)",
+          data: [0, 0, 0],
+          backgroundColor: ["rgba(75, 192, 192, 0.2)"],
+          borderColor: ["rgba(75, 192, 192, 1)"],
+          borderWidth: 1,
+        },
+        {
+          label: "Pengeluaran (Rp)",
+          data: [250000, 0, 0],
+          backgroundColor: ["rgba(255, 99, 132, 0.2)"],
+          borderColor: ["rgba(255, 99, 132, 1)"],
+          borderWidth: 1,
+        },
+        {
+          label: "Saldo (Rp)",
+          data: [(500500 - 250000), 0, 0],
+          backgroundColor: ["rgba(255, 206, 86, 0.2)"],
+          borderColor: ["rgba(255, 206, 86, 1)"],
+          borderWidth: 1,
+        },
+      ],
+      
+    },
+    options: {
+      scales: {
+        y: {
+          beginAtZero: true,
+        },
+      },
+    },
+  });
+}
+let pemasukan = 0;
+let Saldo = 500500;
+let pengeluaran = 250000;
+let saldoAkhir = Saldo - pengeluaran;
+// Fungsi untuk membuat diagram lingkaran
+function createCircleChart() {
+  const ctx = document.getElementById("circleChart").getContext("2d");
+
+  const chart = new Chart(ctx, {
+    type: "doughnut",
+    data: {
+      labels: ["Uang Masuk (Rp)", "Pengeluaran (Rp)", "Saldo (Rp)"],
+      datasets: [
+        {
+          data: [pemasukan, pengeluaran, saldoAkhir],
+          backgroundColor: [
+            "rgba(75, 192, 192, 0.2)",
+            "rgba(255, 99, 132, 0.2)",
+            "rgba(255, 206, 86, 0.2)",
+          ],
+          borderColor: [
+            "rgba(75, 192, 192, 1)",
+            "rgba(255, 99, 132, 1)",
+            "rgba(255, 206, 86, 1)",
+          ],
+          borderWidth: 1,
+        },
+      ],
+    },
+  });
+}
+
+// Panggil fungsi untuk membuat diagram
+createBarChart();
+createCircleChart();
+
+let jumlahUangElement = document.getElementById("jumlah-uang");
+let jumlahUang = saldoAkhir;
+jumlahUangElement.innerText = "Rp " + jumlahUang;
