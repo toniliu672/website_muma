@@ -545,6 +545,7 @@ iframe {
   @media (max-width: 767px) {
     .chart-container {
       height: 200px;
+      padding-bottom: 20px;
     }
   }
 /* CSS */
@@ -555,11 +556,7 @@ iframe {
   }
 
   /* CSS */
-@media (max-width: 393px) {
-    .chart-container {
-      height: 400px;
-    }
-  }
+
   
 /* timeline */
 #section1-1{
@@ -832,10 +829,9 @@ iframe {
   border-bottom: 1px solid white;
   position: relative;
   overflow: hidden;
-  box-sizing: border-box; /* Menambahkan box-sizing agar padding tidak mempengaruhi lebar total */
+  box-sizing: border-box;
 }
 
-/* Efek warna gradient yang bergerak */
 .collapse-btn:before {
   content: "";
   position: absolute;
@@ -866,7 +862,6 @@ iframe {
   }
 }
 
-
 .collapse-btn:hover {
   background-color: #555;
 }
@@ -877,5 +872,18 @@ iframe {
   transition: max-height 0.2s ease-out;
   background-color: #242424;
   padding: 0 18px;
+  box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+  .collapse-content {
+    padding: 0 10px;
+  }
+}
+
+@media (min-width: 180px) {
+  .collapse-content {
+    padding: 0 5px;
+  }
 }
 
