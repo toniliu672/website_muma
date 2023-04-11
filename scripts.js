@@ -166,7 +166,10 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
-
+let pemasukan = 400000;
+let Saldo = 500500;
+let pengeluaran = 250000;
+let saldoAkhir = Saldo - pengeluaran;
 
 // Fungsi untuk membuat diagram batang
 function createBarChart() {
@@ -178,7 +181,7 @@ function createBarChart() {
       datasets: [
         {
           label: "Uang Masuk (Rp)",
-          data: [0, 0, 0],
+          data: [0, 400000, 0],
           backgroundColor: ["rgba(75, 192, 192, 0.2)"],
           borderColor: ["rgba(75, 192, 192, 1)"],
           borderWidth: 1,
@@ -192,7 +195,7 @@ function createBarChart() {
         },
         {
           label: "Saldo (Rp)",
-          data: [(500500 - 250000), 0, 0],
+          data: [saldoAkhir, (saldoAkhir+pemasukan), 0],
           backgroundColor: ["rgba(255, 206, 86, 0.2)"],
           borderColor: ["rgba(255, 206, 86, 1)"],
           borderWidth: 1,
@@ -209,10 +212,7 @@ function createBarChart() {
     },
   });
 }
-let pemasukan = 0;
-let Saldo = 500500;
-let pengeluaran = 250000;
-let saldoAkhir = Saldo - pengeluaran;
+
 // Fungsi untuk membuat diagram lingkaran
 function createCircleChart() {
   const ctx = document.getElementById("circleChart").getContext("2d");
@@ -246,5 +246,5 @@ createBarChart();
 createCircleChart();
 
 let jumlahUangElement = document.getElementById("jumlah-uang");
-let jumlahUang = saldoAkhir;
+let jumlahUang = saldoAkhir+pemasukan;
 jumlahUangElement.innerText = "Rp " + jumlahUang;
