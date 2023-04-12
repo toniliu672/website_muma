@@ -188,7 +188,7 @@ function createBarChart() {
         },
         {
           label: "Pengeluaran (Rp)",
-          data: [250000, 0, (400000+100000)],
+          data: [250000, 0, (400000+100000+46000)],
           backgroundColor: ["rgba(255, 99, 132, 0.2)"],
           borderColor: ["rgba(255, 99, 132, 1)"],
           borderWidth: 1,
@@ -223,7 +223,7 @@ function createCircleChart() {
       labels: ["Uang Masuk (Rp)", "Pengeluaran (Rp)", ],
       datasets: [
         {
-          data: [pemasukan, pengeluaran, ],
+          data: [pemasukan+280000, pengeluaran+546000, ],
           backgroundColor: [
             "rgba(75, 192, 192, 0.2)",
             "rgba(255, 99, 132, 0.2)",
@@ -246,5 +246,5 @@ createBarChart();
 createCircleChart();
 
 let jumlahUangElement = document.getElementById("jumlah-uang");
-let jumlahUang = saldoAkhir+pemasukan+(280000-500000);
+let jumlahUang = saldoAkhir+pemasukan+(280000-500000)-46000;
 jumlahUangElement.innerText = "Rp " + jumlahUang;
