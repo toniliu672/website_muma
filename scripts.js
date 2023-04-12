@@ -15,7 +15,8 @@ let spreadsheets = [
     "https://docs.google.com/spreadsheets/d/e/2PACX-1vTu_hHm_4GTaLlOHBILQ-xK4CnDYpO4O0Hqz-3vJ9NwoUAAv5r9U8vAxg7cUIdgSyuejdtShyiCv_DY/pubhtml?rm=minimal&gid=1001675976&single=true&widget=true&headers=false",
     "https://docs.google.com/spreadsheets/d/e/2PACX-1vRpecI3p684bu6eF25W0DaTnGNom9Lt60XmRZFIErmPsW87ZID_prReuDe_gXM47_S3aiC2CtXUIeps/pubhtml?rm=minimal&gid=0&single=true&widget=true&headers=false",
     "https://docs.google.com/spreadsheets/d/e/2PACX-1vSgzBd_zAxOR3CoxoF4GsHtA9XQDlNyipNfsmLpWFbHdN7ywb94y-hP1hDmI9s1H5k1dSCYU3s2Q76I/pubhtml?rm=minimal&gid=0&single=true&widget=true&headers=false",
-    "https://drive.google.com/uc?export=view&id=1o2ziF2I2DW1OqHRCNpNa7xmtQlPUrF0H"
+    "https://drive.google.com/uc?export=view&id=1o2ziF2I2DW1OqHRCNpNa7xmtQlPUrF0H",
+    "https://docs.google.com/spreadsheets/d/e/2PACX-1vQG3daFYIyhF_3nATDkAFBImxBqjgj3uM9ODIYFW6KMHdK7MADuNn-rjFd7AjkDamJTAnOUOx2egpBC/pubhtml?rm=minimal&gid=0&single=true&widget=true&headers=false"
   ];
 
 function setPopupSize() {
@@ -248,3 +249,18 @@ createCircleChart();
 let jumlahUangElement = document.getElementById("jumlah-uang");
 let jumlahUang = saldoAkhir+pemasukan+(280000-500000)-46000;
 jumlahUangElement.innerText = "Rp " + jumlahUang;
+
+document.addEventListener("DOMContentLoaded", function () {
+  const coll = document.getElementsByClassName("collapsible");
+  for (let i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function () {
+      this.classList.toggle("active");
+      const content = this.nextElementSibling;
+      if (content.style.maxHeight) {
+        content.style.maxHeight = null;
+      } else {
+        content.style.maxHeight = content.scrollHeight + "px";
+      }
+    });
+  }
+});

@@ -85,7 +85,7 @@
             <p></p>
           </div>
         </div>
-        <div class="timeline-block" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
+        <div class="timeline-block" >
           <span class="timeline-date">Kamis, 13 April</span>
           <div class="timeline-content">
             <h3>Sidang MUMAJUR</h3>
@@ -155,14 +155,23 @@
     <div class="content">
       <h2>Dokumen</h2>
     </div>
-    <div>
-      <h3 class="sub-judul">31 Mar - 3 Apr</h3>
+    <div class="container-section3">
+      <button class="collapsible">31 Mar - 3 Apr</button>
+      <div class="content2">
+        <button class="popup-btn2" onclick="openPopup(1)">Pengumpulan Uang Modal</button>
+        <button class="popup-btn2" onclick="openPopup(2)">Penjualan Pisang 31 Mar - 3 Apr</button>
+        <button class="popup-btn2" onclick="openPopup(3)">Arus Kas 31 Mar - 3 Apr</button>
+        <button class="popup-btn2" onclick="openPopup(4)">Nota Pembelian Pisang 3 April</button>
+      </div>
+      
+      <button class="collapsible">10 Mar - 13 Apr</button>
+      <div class="content2">
+        <button class="popup-btn2" onclick="openPopup(5)">Arus Kas 10 Apr - 13 Apr</button>
+      </div>
     </div>
-    <button class="popup-btn" onclick="openPopup(1)">Pengumpulan Uang Modal</button>
-    <button class="popup-btn" onclick="openPopup(2)">Penjualan Pisang 31 Mar - 3 Apr</button>
-    <button class="popup-btn" onclick="openPopup(3)">Arus Kas 31 Mar - 3 Apr</button>
-    <button class="popup-btn" onclick="openPopup(4)">Nota Pembelian Pisang 3 April</button>
+    
 
+    
     <div id="popup" class="popup hidden">
       <div id="popup-content" class="popup-content">
         <span class="close-btn" onclick="closePopup()">&times;</span>
@@ -170,6 +179,7 @@
         <iframe id="spreadsheet" src="" frameborder="0"></iframe>
       </div>
     </div>
+    
     <div class="shape square" style="top: 20%; left: 20%;"></div>
     <div class="shape square" style="top: 60%; left: 80%;"></div>
     <div class="shape circle" style="top: 40%; left: 60%;"></div>
