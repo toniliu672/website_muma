@@ -72,13 +72,14 @@ const cashFlowChart = new Chart(document.getElementById("cashFlowChart"), {
 });
 
 // Diagram lingkaran pendapatan dan pengeluaran
+let saldo1 = 750500-250000 
 const incomeExpenseChart = new Chart(document.getElementById("incomeExpenseChart"), {
   type: "doughnut",
   data: {
     labels: ["Pendapatan", "Pengeluaran"],
     datasets: [
       {
-        data: [750500, 250000], // Contoh data
+        data: [saldo1, 250000], // Contoh data
         backgroundColor: ["rgba(75, 192, 192, 0.2)", "rgba(255, 99, 132, 0.2)"],
         borderColor: ["rgba(75, 192, 192, 1)", "rgba(255, 99, 132, 1)"],
         borderWidth: 1,
@@ -182,21 +183,21 @@ function createBarChart() {
       datasets: [
         {
           label: "Uang Masuk (Rp)",
-          data: [0, 400000, 280000],
+          data: [0, 500000, 180000, 0],
           backgroundColor: ["rgba(75, 192, 192, 0.2)"],
           borderColor: ["rgba(75, 192, 192, 1)"],
           borderWidth: 1,
         },
         {
           label: "Pengeluaran (Rp)",
-          data: [250000, 0, (400000+100000+46000)],
+          data: [250000, 500000, 46000, 82000],
           backgroundColor: ["rgba(255, 99, 132, 0.2)"],
           borderColor: ["rgba(255, 99, 132, 1)"],
           borderWidth: 1,
         },
         {
           label: "Saldo (Rp)",
-          data: [saldoAkhir, (saldoAkhir+pemasukan), (650500+280000)-546000],
+          data: [250500, (250500+500000)-500000, (250500+180000)-46000, 384500-82000],
           backgroundColor: ["rgba(255, 206, 86, 0.2)"],
           borderColor: ["rgba(255, 206, 86, 1)"],
           borderWidth: 1,
@@ -218,13 +219,18 @@ function createBarChart() {
 function createCircleChart() {
   const ctx = document.getElementById("circleChart").getContext("2d");
 
+  let uangAwal = 500500;
+  let uangMasuk = 380000+180000+50000+50000+20000;
+  let uangKeluar = 250000+400000+100000+46000+50000+10000+22000
+  let Saldo = uangAwal+uangMasuk-uangKeluar;
+
   const chart = new Chart(ctx, {
     type: "doughnut",
     data: {
-      labels: ["Uang Masuk (Rp)", "Pengeluaran (Rp)", ],
+      labels: ["Saldo (Rp)", "Pengeluaran (Rp)", ],
       datasets: [
         {
-          data: [pemasukan+280000, pengeluaran+546000, ],
+          data: [Saldo, uangKeluar],
           backgroundColor: [
             "rgba(75, 192, 192, 0.2)",
             "rgba(255, 99, 132, 0.2)",
@@ -247,7 +253,7 @@ createBarChart();
 createCircleChart();
 
 let jumlahUangElement = document.getElementById("jumlah-uang");
-let jumlahUang = saldoAkhir+pemasukan+(280000-500000)-46000;
+let jumlahUang = saldoAkhir+pemasukan+(280000-500000)-46000-50000-22000-10000;
 jumlahUangElement.innerText = "Rp " + jumlahUang;
 
 document.addEventListener("DOMContentLoaded", function () {
