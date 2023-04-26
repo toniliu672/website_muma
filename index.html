@@ -5,256 +5,259 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>MUMAJUR 2023</title>
-  <link rel="stylesheet" href="style.css">
-  <!-- ... -->
+  <link rel="stylesheet" href="style/section4.css">
+  <link rel="stylesheet" href="style/section3.css">
+  <link rel="stylesheet" href="style/section2.css">
+  <link rel="stylesheet" href="style/section1.css">
+  <link rel="stylesheet" href="style/style.css">
+  <link rel="stylesheet" href="style/nav.css">
   <link rel="stylesheet" href="https://unpkg.com/swiper@6/swiper-bundle.min.css" />
   <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
-  <!-- ... -->
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
   <link rel="stylesheet" href="https://cdn.knightlab.com/libs/timeline3/latest/css/timeline.css">
   <script src="https://cdn.knightlab.com/libs/timeline3/latest/js/timeline.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-element-bundle.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/@barba/core"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.2/fullpage.min.css"
+    integrity="sha512-4rPgyv5iG0PZw8E+oRdfN/Gq+yilzt9rQ8YwRG7gr8pek8r7j9IjK9i7yJU3jF3/3KKkZO/idgF6ZuU6JGQ6g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    integrity="sha384-kzl7y7NgFjqDbYdeWnlxEFtMzBm7yLV4vD4I8rnk+JG0tQ/xVIbtEEzD1S8I68XN" crossorigin="anonymous"
+    referrerpolicy="no-referrer" />
 
+  <!-- Gsap Library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollToPlugin.min.js"></script>
+  <!-- akhir Gsap Library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollify/1.0.20/jquery.scrollify.min.js"></script>
+  <script async src="https://unpkg.com/es-module-shims@1.6.3/dist/es-module-shims.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+  <script src="https://cdn.jsdelivr.net/npm/@mojs/core"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.2/fullpage.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 </head>
 
 
 </head>
 
 <body>
-  <nav>
-    <div class="nav-container">
-      <div class="logo"></div>
-      <ul class="menu">
-        <li><a href="#section1-1">Timeline</a></li>
-        <li><a href="#section2">Grafik Keuangan</a></li>
-        <li><a href="#section3">Dokumen Keuangan</a></li>
+  <main>
+    <div id="preloader">
+      <img src="img/logo.png" alt="Logo" class="preloader-logo">
+      <h2 class="preloader-text">MUMAJUR 2023</h2>
+      <div class="loader"></div>
+    </div>
+
+
+
+    <!-- Sidebar dan Nav -->
+    <nav>
+      <div class="nav__title">
+        <img src="img/logo.png" alt="" width="60px">
+        <h1>MUMAJUR 2023</h1>
+      </div>
+      <ul>
+        <li>
+          <img src="" alt="">
+          <a href="#section__1" data-section="1">Home</a>
+        </li>
+        <li>
+          <img src="" alt="">
+          <a href="#section__2" data-section="2">Keuangan</a>
+        </li>
+        <li>
+          <img src="" alt="">
+          <a href="#section__3" data-section="3">Gallery</a>
+        </li>
+        <li>
+          <img src="" alt="">
+          <a href="#section__4" data-section="4">Hasil</a>
+        </li>
       </ul>
-      <div class="navbar">
-        <div class="hamburger">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-        <ul id="mobile-menu" class="mobile-nav">
-          <li><a href="#section1-1">Timeline</a></li>
-          <li><a href="#section2">Saldo Kas</a></li>
-          <li><a href="#section3">Dokumen Spreadsheet</a></li>
-        </ul>
-      </div>
+      <!-- <div class="nav__hastag">
+        <h2>#BangkitMenujuKejayaan</h2>
+      </div> -->
+    </nav>
+    <!-- Akhir Sidebar dan nav -->
 
-
-  </nav>
-  <section id="section1">
-    <div class="content">
-      <h1>MUMAJUR 2023</h1>
-    </div>
-    <!-- Tambahkan elemen kotak dan gelembung -->
-    <div class="shape square" style="top: 20%; left: 20%;"></div>
-    <div class="shape square" style="top: 60%; left: 80%;"></div>
-    <div class="shape circle" style="top: 40%; left: 60%;"></div>
-    <div class="shape circle" style="top: 80%; left: 30%;"></div>
-  </section>
-  <div class="bg-object"></div>
-  <div class="bg-object"></div>
-  <div class="bg-object"></div>
-  <div class="bg-object"></div>
-  <!-- <section id="section1-1">
-    <div class="content">
-      <h2>Timeline</h2>
-    </div>
-    <div class="timeline">
-      <div class="timeline-container">
-        <div class="bg-object"></div>
-        <div class="bg-object"></div>
-        <div class="bg-object"></div>
-        <div class="bg-object"></div>
-        <div class="timeline-block" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
-          <span class="timeline-date">Selasa, 11 April</span>
-          <div class="timeline-content">
-            <h3>Pencarian Dana Ke-2</h3>
-            <ul>
-              <li>Mulai dari jam 10:00 WITA</li>
-              <li>Dan setelahnya akan ada rapat evaluasi & latihan pimpinan sidang</li>
-            </ul>
-            <p></p>
+    <div class="fullpage">
+      <!-- Section Home -->
+      <section id="section__1">
+        <div class="home__container">
+          <div class="home__title">
+            <h1>MUMAJUR 2023</h1>
           </div>
-        </div>
-        <div class="timeline-block" >
-          <span class="timeline-date">Kamis, 13 April</span>
-          <div class="timeline-content">
-            <h3>Sidang MUMAJUR</h3>
-            <ul>
-              <li>Tempat : Ruangan Kegiatan LKM Lantai 2</li>
-              <li>Waktu : 16:00 WITA</li>
-            </ul>
+          <div class="home__subtitle">
+            <h3>Musyawarah Mahasiswa Jurusan PTIK 2023</h3>
           </div>
+          <ul>
+            <li><a href="#section__2" data-section="2">Laporan Keuangan</a></li>
+            <li><a href="#section__3" data-section="3">Gallery Kegiatan</a></li>
+            <li><a href="#section__4" data-section="4">Hasil Rapat</a></li>
+          </ul>
         </div>
-        Tambahkan lebih banyak blok kegiatan di sini
-      </div>
-    </div>
-  </section> -->
+      </section>
+      <!-- Akhir Section Home -->
+      <div class="wrapper">
+        <div class="main-content">
+          <!-- Section 2 Laporan Keuangan -->
+          <section id="section__2">
+            <div class="laporan__container">
+              <div class="laporan__title">
+                <h1>Laporan Keuangan</h1>
+              </div>
+              <div class="laporan__content">
+                <div class="chart-buttons">
+                  <button class="chart-btn" data-chart="31-mar-3-apr">31 Mar - 3 Apr</button>
+                  <button class="chart-btn" data-chart="10-apr-13-apr">10 Apr - 13 Apr</button>
+                  <button class="chart-btn" data-chart="laporan-akhir">Laporan Akhir</button>
+                  <button class="chart-btn" id="sheet-btn">Dokumen S-Sheet</button>
+                </div>
+              </div>
+              <div class="iframe-container" id="iframe-container" style="display: none;">
+                <button class="close-btn" id="close-btn">x</button>
+                <iframe class="gdoc-iframe"
+                  src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQtEpF0Pm7EcT94d-mRbwzYYZhoG6tS7v5k_1ePd7tQ5jrmYX0nAlx2NtF1DaMgtKjMkE6Emb0gb8Q9/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false"></iframe>
+              </div>
+              <div class="chart-content">
+                <!-- Tempatkan konten grafik Anda di sini -->
+              </div>
 
-  <section id="section2">
-    <div class="content">
-      <h2>Saldo Kas</h2>
-    </div>
-    <!-- Collapse menu -->
+              <div>
+                <p class="text">Jumlah uang di bendahara saat ini adalah <br><span class="highlight"
+                    id="jumlah-uang">Rp.302.500</span>.
+                </p>
+              </div>
+            </div>
+          </section>
+          <!-- Akhir Section 2 Laporan Keuangan -->
 
-    <div class="collapse-menu">
-      <button class="collapse-btn">31 Mar - 3 Apr</button>
-      <div class="collapse-content">
-        <div>
-          <h3 class="sub-judul">Arus Kas <br> 31 Mar - 3 Apr</h3>
+          <!-- Section 3 Galery -->
+          <section id="section__3">
+            <div class="galery__container">
+              <div class="galery__title">
+                <h1>Gallery Kegiatan</h1>
+              </div>
+              <div class="galery__link">
+                <button><a
+                    href="https://drive.google.com/drive/folders/13wY0rRppM-Zyu8rrvwvxKrzNdUyZf-pT?usp=share_link">Link
+                    G-Drive</a></button>
+              </div>
+              <div class="grid">
+                <div class="grid-item">
+                  <img src="img/image1.jpg" alt="">
+                </div>
+                <div class="grid-item">
+                  <img src="img/IMG-20230416-WA0013.jpg" alt="">
+                </div>
+                <div class="grid-item">
+                  <img src="img/IMG-20230416-WA0023.jpg" alt="">
+                </div>
+                <div class="grid-item">
+                  <img src="img/IMG-20230416-WA0028.jpg" alt="">
+                </div>
+                <div class="grid-item">
+                  <img src="img/IMG-20230416-WA0030.jpg" alt="">
+                </div>
+                <div class="grid-item">
+                  <img src="img/IMG-20230416-WA0008_waifu2x_photo_noise3.png" alt="">
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- Akhir Section 3 Galery -->
+
+          <!-- Section 4 Hasil -->
+          <section id="section__4">
+            <div class="hasil__container">
+              <div class="hasil__title">
+                <h1>HASIL RAPAT</h1>
+              </div>
+              <div class="hasil__img">
+                <div class="hasil__img-container">
+                  <h2>Ketua Terpilih</h2>
+                  <img src="img/ketua1.png" alt="">
+                  <h4>Fiadeli Tatimu</h4>
+                </div>
+                <div class="hasil__img-container">
+                  <h2>Sekretaris Jenderal</h2>
+                  <img src="img/sekjen.png" alt="">
+                  <h4>Venly Liando</h4>
+                </div>
+              </div>
+              <div class="hasil__mv">
+                <div class="hasil__mv-visi">
+                  <h3>Visi</h3>
+                  <p>Menjadikan HMJ PTIK sebagai wadah pengembangan potensi mahasiswa yang berlandaskan kebersamaan dan
+                    kekeluargaan untuk mewujudkan generasi unggul yang berkualitas, inovatif, dan beretika.</p>
+                </div>
+                <div class="hasil__mv-misi">
+                  <h3>Misi</h3>
+                  <p>1. Membangun kebersamaan dan kekeluargaan di antara seluruh mahasiswa jurusan ptik melalui
+                    kegiatan-kegiatan yang mengedepankan kerjasama dan toleransi. <br>
+                    <br>
+                    2. Menanamkan nilai-nilai moral dan etika yang tinggi bagi mahasiswa. <br>
+                    <br>
+                    3. Menyediakan wadah bagi mahasiswa untuk mengembangkan minat dan bakat melalui kegiatan-kegiatan
+                    pembelajaran, pelatihan, serta perlombaan yang berkualitas dan bermanfaat. <br>
+                    <br>
+                    4. Mendorong partisipasi aktif mahasiswa dalam kegiatan organisasi, kemahasiswaan dan kegiatan
+                    sosial,
+                    yang berguna bagi lingkungan sekitar. <br>
+                    <br>
+                    5. Menjalin kerjasama yang erat dengan pihat internal dan eksternal untuk berkolaborasi dan
+                    berinovasi
+                    dalam meningkatkan kualitas serta kuantitas dari jurusan pendidikan teknologi informasi dan
+                    komunikasi. <br>
+                  </p>
+                </div>
+
+              </div>
+              <div class="hasil__hastag">
+                <h2>#BangkitMenujuKejayaan</h2>
+              </div>
+            </div>
+          </section>
+          <!-- Akhir Section 4 Hasil -->
         </div>
-        <div class="dashboard">
-          <div class="chart-container batang">
-            <canvas id="cashFlowChart"></canvas>
-          </div>
-          <div class="chart-container">
-            <canvas id="incomeExpenseChart"></canvas>
-          </div>
-        </div>
-        <!-- <p class="text">Piutang = <span class="highlight2">Rp.50.000</span> , Sumbangan = <span class="highlight3">Rp.50.000</span>, Modal = <span class="highlight3">Rp.200.000</span>, Laba bersih = <span class="highlight3">Rp.300.500</span>.</p> -->
-        <!-- <p class="text">Total Saldo Kas = <span class="highlight">Rp.500.500</span></p> -->
-      </div>
-
-
-      <button class="collapse-btn">10 Apr - 13 Apr</button>
-      <div class="collapse-content">
-        <div>
-          <h3 class="sub-judul">Arus Kas <br> 10 - 13 Apr</h3>
-        </div>
-        <div class="dashboard">
-          <!-- Diagram Batang -->
-          <div class="chart-container">
-            <canvas id="barChart"></canvas>
-          </div>
-
-          <!-- Diagram Lingkaran -->
-          <div class="chart-container">
-            <canvas id="circleChart"></canvas>
-          </div>
-          <br>
-        </div>
-        <!-- <p class="text">Pengeluaran = Konsumsi 400rb, baliho&2 lampu 147rb <span class="highlight2">Rp.547.000</span>, Sumbangan =  <span class="highlight3"> Kajur 180rb, Enci Carnila 50rb, Tante kak Rana 50rbRp.280.000 </span>, Modal = <span class="highlight3">Rp.250.000</span>, Laba bersih = <span class="highlight3">Rp.430.000</span>.</p> -->
-        <!-- Content goes here --> 
       </div>
     </div>
-    <div>
-      <p class="text">Jumlah uang di bendahara saat ini adalah <br><span class="highlight" id="jumlah-uang"></span>.</p>
-    </div>
 
 
-  </section>
 
 
-  <section id="section3">
-    <div class="content">
-      <h2>Dokumen</h2>
-    </div>
-    <div class="container-section3">
-      <button class="collapsible">31 Mar - 3 Apr</button>
-      <div class="content2">
-        <button class="popup-btn2" onclick="openPopup(1)">Pengumpulan Uang Modal</button>
-        <button class="popup-btn2" onclick="openPopup(2)">Penjualan Pisang 31 Mar - 3 Apr</button>
-        <button class="popup-btn2" onclick="openPopup(3)">Arus Kas 31 Mar - 3 Apr</button>
-        <button class="popup-btn2" onclick="openPopup(4)">Nota Pembelian Pisang 3 April</button>
-      </div>
-      
-      <button class="collapsible">10 Mar - 13 Apr</button>
-      <div class="content2">
-        <button class="popup-btn2" onclick="openPopup(5)">Arus Kas 10 Apr - 13 Apr</button>
-      </div>
-    </div>
-    
-
-    
-    <div id="popup" class="popup hidden">
-      <div id="popup-content" class="popup-content">
-        <span class="close-btn" onclick="closePopup()">&times;</span>
-        <div id="resizer" class="resizer"></div>
-        <iframe id="spreadsheet" src="" frameborder="0"></iframe>
-      </div>
-    </div>
-    
-    <div class="shape square" style="top: 20%; left: 20%;"></div>
-    <div class="shape square" style="top: 60%; left: 80%;"></div>
-    <div class="shape circle" style="top: 40%; left: 60%;"></div>
-    <div class="shape circle" style="top: 80%; left: 30%;"></div>
-  </section>
-
-  <script>
-    const hamburger = document.querySelector('.hamburger');
-    const mobileMenu = document.querySelector('#mobile-menu');
-
-    hamburger.addEventListener('click', () => {
-      mobileMenu.classList.toggle('show');
-      hamburger.classList.toggle('open');
-    });
-
-    document.addEventListener('scroll', () => {
-      mobileMenu.classList.remove('show');
-      hamburger.classList.remove('open');
-    });
-  </script>
-  <script>
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-          behavior: 'smooth'
-        });
-      });
-    });
-  </script>
-
-  <script>
-    var timeline_json_url = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vTlcas19HbZ47VRdb_DpCY8cN6dmIBQTUjzPqbN0VmRkQ1AQ966i0qGq7-pujpeGxo5RYOxAASxvm2S/pubhtml?gid=0&single=true'; // Ganti dengan URL Google Sheets Anda
-
-    var additionalOptions = {
-      start_at_end: false,
-      timenav_position: 'top',
-      initial_zoom: 2
-    };
-
-    var timeline = new TL.Timeline('timeline-embed', timeline_json_url, additionalOptions);
-  </script>
 
 
-  <!-- HTML -->
-  <script>
-    $(document).ready(function () {
-      $("a.nav-link").on("click", function (event) {
-        if (this.hash !== "") {
-          event.preventDefault();
-          const hash = this.hash;
+  </main>
 
-          $("html, body").animate(
-            {
-              scrollTop: $(hash).offset().top,
-            },
-            800,
-            function () {
-              window.location.hash = hash;
-            }
-          );
-        }
-      });
-    });
-  </script>
-  <script>
-    AOS.init();
-  </script>
+  <div class="shape square" style="top: 20%; left: 20%;"></div>
+  <div class="shape square" style="top: 60%; left: 80%;"></div>
+  <div class="shape circle" style="top: 40%; left: 60%;"></div>
+  <div class="shape circle" style="top: 80%; left: 30%;"></div>
 
+  <script src="components/scripts.js"></script>
+  <script src="components/sidebar.js"></script>
+  <script src="components/section2-graph.js"></script>
+  <script src="components/barba-script.js"></script>
+  <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.js"></script>
+  <script src="https://unpkg.com/masonry-layout@4.2.2/dist/masonry.pkgd.min.js"></script>
+  <script src="https://unpkg.com/imagesloaded@4.1.4/imagesloaded.pkgd.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.2/fullpage.min.js"
+    integrity="sha512-4Ywv4I4xW8MTg9e4Gy1c1I0caFPt8kgOJ2kL67G7e2yL9uV7Q2M0aYV7+BqeZORxmsV7/gw6A77uV7aD0U9yGw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-  <script src="scripts.js"></script>
 </body>
 
 </html>

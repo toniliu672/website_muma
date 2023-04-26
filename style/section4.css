@@ -1,0 +1,156 @@
+/* Section 4 Hasil */
+#section__4 {
+	padding: 40px 0;
+	background-color: #f5f5f5;
+}
+
+.hasil__container {
+	max-width: 1200px;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.hasil__title {
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+.hasil__title h1 {
+	font-size: 2.5rem;
+	text-transform: uppercase;
+	margin-bottom: 10px;
+}
+
+.hasil__title-jabatan {
+	display: flex;
+	justify-content: space-around;
+	width: 100%;
+}
+
+.hasil__img {
+	display: flex;
+	justify-content: space-around;
+	width: 100%;
+	margin-bottom: 40px;
+}
+
+.hasil__img-container {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.hasil__img-container img {
+	width: 100%;
+	height: auto;
+	max-width: 280px;
+	max-height: 513px;
+	object-fit: cover;
+	border-radius: 15%;
+	z-index: 1;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.hasil__img-container h2 {
+	color: #2a2a2a;
+	font-weight: 600;
+	font-size: 1.4rem;
+	background: linear-gradient(
+		90deg,
+		rgba(2, 0, 36, 1) 0%,
+		rgba(9, 9, 121, 1) 35%,
+		rgba(0, 212, 255, 1) 100%
+	);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.hasil__img-container h4 {
+	margin-top: 10px;
+	text-align: center;
+	font-weight: 600;
+	font-size: 1.2rem;
+	color: #444;
+	text-transform: uppercase;
+}
+
+.hasil__mv {
+	display: flex;
+	justify-content: space-around;
+	width: 100%;
+	margin-bottom: 40px;
+}
+
+.hasil__mv-misi,
+.hasil__mv-visi {
+	background-color: #ffffff;
+	padding: 20px;
+	border-radius: 10px;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	width: 45%;
+}
+
+.hasil__mv h3 {
+	margin-bottom: 10px;
+	text-align: center;
+	margin-right: 40px;
+}
+
+.hasil__mv p {
+	text-align: justify;
+	margin: 0 10px;
+	overflow-wrap: break-word;
+	word-wrap: break-word;
+	font-size: 16px;
+}
+
+.hasil__hastag {
+	margin-bottom: 20px;
+}
+
+.hasil__hastag h2 {
+	background-image: linear-gradient(to left, #f06, #0078ff);
+	-webkit-background-clip: text;
+	color: transparent;
+	display: inline;
+	font-size: 20px;
+}
+
+@media (max-width: 768px) {
+	.hasil__title-jabatan,
+	.hasil__img,
+	.hasil__mv {
+		flex-direction: column;
+	}
+	.hasil__mv-misi,
+	.hasil__mv-visi {
+		width: 100%;
+		margin-bottom: 20px;
+	}
+	.hasil__img-container img {
+		width: 60%;
+	}
+
+	.hasil__mv p {
+		font-size: 16px;
+		line-height: 1.5;
+		letter-spacing: 0.5px;
+		margin-right: 40px;
+	}
+    .hasil__title h1 {
+        font-size: 1.8rem;
+
+    }
+}
+
+@media (min-width: 1028px) {
+	.hasil__mv p {
+		font-size: 16px;
+		line-height: 1.5;
+		letter-spacing: 0.5px;
+		margin-right: 40px;
+	}
+}
