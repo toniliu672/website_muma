@@ -69,7 +69,7 @@ nav li:hover a {
 }
 
 /* Laptop dan desktop */
-@media only screen and (min-width: 1025px) {
+@media only screen and (min-width: 769px) {
 	nav {
 		display: block;
 		position: fixed;
@@ -129,7 +129,7 @@ nav li:hover a {
 }
 
 /* Tablet dan ponsel */
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 768px) {
 	nav {
 		display: flex;
 		align-items: center;
